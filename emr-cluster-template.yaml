@@ -215,6 +215,8 @@ Resources:
       VisibleToAllUsers: true
       ServiceRole: !Ref EMRServiceRole
       JobFlowRole: !Ref EMRInstanceProfile
+      AutoTerminationPolicy:
+        IdleTimeout: 3600
       Tags:
         - Key: Name
           Value: MyEMRCluster
